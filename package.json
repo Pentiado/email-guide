@@ -1,0 +1,29 @@
+{
+  "name": "email-guide",
+  "version": "0.0.0",
+  "description": "",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Pentiado/email-guide.git"
+  },
+  "keywords": [
+    "email"
+  ],
+  "author": "Pentiado",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Pentiado/email-guide/issues"
+  },
+  "scripts": {
+    "test": "node_modules/.bin/mocha --recursive"
+  },
+  "homepage": "https://github.com/Pentiado/email-guide",
+  "dependencies": {
+    "excel": "^0.1.1",
+    "lodash": "^2.4.1"
+  },
+  "devDependencies": {
+    "mocha": "^1.18.2"
+  }
+}
