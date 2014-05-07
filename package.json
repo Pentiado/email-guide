@@ -21,6 +21,8 @@
   "homepage": "https://github.com/Pentiado/email-guide",
   "dependencies": {
     "excel": "^0.1.1",
+    "jquery": "^2.1.1",
+    "jsdom": "^0.10.5",
     "lodash": "^2.4.1"
   },
   "devDependencies": {
