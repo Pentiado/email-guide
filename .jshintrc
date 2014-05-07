@@ -19,6 +19,7 @@
   "smarttabs": true,
   "globals": {
     "describe": true,
-    "it": true
+    "it": true,
+    "chai": true
   }
 }

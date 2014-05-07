@@ -16,7 +16,7 @@
     "url": "https://github.com/Pentiado/email-guide/issues"
   },
   "scripts": {
-    "test": "node_modules/.bin/mocha --recursive"
+    "test": "node_modules/.bin/mocha --recursive --reporter spec"
   },
   "homepage": "https://github.com/Pentiado/email-guide",
   "dependencies": {
@@ -26,6 +26,7 @@
     "lodash": "^2.4.1"
   },
   "devDependencies": {
+    "chai": "^1.9.1",
     "mocha": "^1.18.2"
   }
 }
