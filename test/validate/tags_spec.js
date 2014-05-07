@@ -29,4 +29,27 @@ describe('tags', function() {
       });
     });
   });
+  describe('findInTag()', function () {
+    it('should return null when no html tags', function (done) {
+      jsdom.env('<html><head></head><body></body></html>', {
+        src: [jquery],
+        done: function (errors, window) {
+          var tags = validate.findInTag(window.$, ['<link> in <head>', '<div> in <p>']);
+          expect(tags).to.be.not.ok;
+          done();
+        }
+      });
+    });
+    it('should return names of found tags', function (done) {
+      jsdom.env('<html><head></head><body><canvas></canvas></body></html>', {
+        src: [jquery],
+        done: function (errors, window) {
+          var search = ['<canvas> in <body>', '<body> in <canvas>'];
+          var tags = validate.findInTag(window.$, search);
+          expect(tags).to.deep.equal(['<canvas> in <body>']);
+          done();
+        }
+      });
+    });
+  });
 });
