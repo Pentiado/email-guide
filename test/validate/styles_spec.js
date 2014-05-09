@@ -55,22 +55,6 @@ describe('styles', function() {
       ]);
     });
   });
-  describe('getAllRules()', function () {
-    it('should return all styles found', function (done) {
-      jsdom.env('<html><head><style>body { color: black; background: red; }</style></head><body><style>div { font-size: 12px; }</style></body></html>', {
-        src: [jquery],
-        done: function (errors, window) {
-          var rules = validate.getAllRules(window);
-          var expected = [
-            'div {font-size: 12px;}',
-            'body {color: black; background: red;}'
-          ];
-          expect(rules).to.deep.equal(expected);
-          done();
-        }
-      });
-    });
-  });
   describe('findInStyle()', function () {
     it('should return all styles found', function (done) {
       jsdom.env('<html><head><style>body { color: black; background: red; }</style></head><body><style>p { font-size: 12px; }</style></body></html>', {
