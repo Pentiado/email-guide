@@ -12,6 +12,9 @@
   ],
   "author": "Pentiado",
   "license": "MIT",
+  "bin": {
+    "email-guide update": "bin/update"
+  },
   "bugs": {
     "url": "https://github.com/Pentiado/email-guide/issues"
   },
@@ -20,12 +23,13 @@
   },
   "homepage": "https://github.com/Pentiado/email-guide",
   "dependencies": {
-    "excel": "^0.1.1",
     "jquery": "^2.1.1",
     "jsdom": "^0.10.5",
     "lodash": "^2.4.1"
   },
   "devDependencies": {
+    "excel": "^0.1.1",
+    "unzip": "^0.1.9",
     "chai": "^1.9.1",
     "mocha": "^1.18.2"
   }
