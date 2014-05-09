@@ -12,7 +12,7 @@ describe('Parser', function () {
     });
   });
 
-  describe('getGroups()', function () {
+  describe('getTests()', function () {
     it('should return grouped values', function () {
       var arr = [
         ['Responsive', '', '', ''],
@@ -23,19 +23,19 @@ describe('Parser', function () {
       ];
       var expected = {
         'Responsive': {
-          '@media': [true, false]
+          '@media': ['Yes', 'No']
         },
         'Style element': {
-          '<style> in <body>': [true, true],
-          '<style> in <head>': [true, false]
+          '<style> in <body>': ['Yes', 'Yes'],
+          '<style> in <head>': ['Yes', 'No']
         }
       };
-      var groups = service.getGroups(arr);
+      var groups = service.getTests(arr);
       assert.deepEqual(expected, groups);
     });
   });
 
-  describe('combineValues()', function () {
+  describe.skip('combineValues()', function () {
     it('should return combined values', function () {
       var platforms = ['P1', 'P2'];
       var clientsGroups = [['C1', 'C2'], ['C3', 'C4']];
