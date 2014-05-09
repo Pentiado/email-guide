@@ -2,7 +2,7 @@
   "name": "email-guide",
   "version": "0.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "./lib/guide.js",
   "repository": {
     "type": "git",
     "url": "git://github.com/Pentiado/email-guide.git"
@@ -19,7 +19,14 @@
     "url": "https://github.com/Pentiado/email-guide/issues"
   },
   "scripts": {
-    "test": "node_modules/.bin/mocha --recursive --reporter spec"
+    "test": "node_modules/.bin/mocha --recursive --reporter spec",
+    "coverage": "node_modules/.bin/mocha --recursive -r blanket -R html-cov > coverage.html"
+  },
+  "config": {
+    "blanket": {
+      "pattern": "lib",
+      "data-cover-never": "node_modules"
+    }
   },
   "homepage": "https://github.com/Pentiado/email-guide",
   "dependencies": {
