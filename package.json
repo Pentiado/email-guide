@@ -1,26 +1,23 @@
 {
   "name": "email-guide",
-  "version": "0.0.0",
-  "description": "",
+  "version": "1.0.0",
+  "description": "The Ultimate Guide for developing your emails",
   "main": "./lib/guide.js",
   "repository": {
     "type": "git",
     "url": "git://github.com/Pentiado/email-guide.git"
   },
   "keywords": [
-    "email"
+    "email", "guide"
   ],
-  "author": "Pentiado",
+  "author": "Paweł Wszoła (Pentiado)",
   "license": "MIT",
-  "bin": {
-    "email-guide update": "bin/update"
-  },
   "bugs": {
     "url": "https://github.com/Pentiado/email-guide/issues"
   },
   "scripts": {
-    "test": "node_modules/.bin/mocha --recursive --reporter spec --timeout 5000",
-    "coverage": "node_modules/.bin/mocha --recursive -r blanket -R html-cov > coverage.html --timeout 5000"
+    "test": "node_modules/.bin/mocha --recursive --reporter spec",
+    "coverage": "node_modules/.bin/mocha --recursive -r blanket -R html-cov > coverage.html"
   },
   "config": {
     "blanket": {
@@ -35,9 +32,12 @@
     "lodash": "^2.4.1"
   },
   "devDependencies": {
-    "excel": "^0.1.1",
-    "unzip": "^0.1.9",
+    "blanket": "^1.1.6",
     "chai": "^1.9.1",
-    "mocha": "^1.18.2"
+    "coveralls": "^2.10.0",
+    "excel": "^0.1.1",
+    "mocha": "^1.18.2",
+    "mocha-lcov-reporter": "0.0.1",
+    "unzip": "^0.1.9"
   }
 }
