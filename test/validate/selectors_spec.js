@@ -50,7 +50,7 @@ describe('selectors', function() {
       }
     });
   });
-  describe('findSelectors()', function() {
+  describe('validate()', function() {
     it('should return found selectors', function(done) {
       var html = '<html><head>' +
         '<style>body { color: black; } div > a.abc { top: 10px; }</style>' +
@@ -61,7 +61,7 @@ describe('selectors', function() {
         src: [jquery],
         done: function (errors, window) {
           var selectors = ['E', 'E > F', 'E.classname', 'E#id'];
-          var foundSelectors = validate.findSelectors(window, selectors);
+          var foundSelectors = validate.validate(window, selectors);
           expect(foundSelectors).to.deep.equal(['E.classname', 'E > F', 'E']);
           done();
         }

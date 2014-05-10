@@ -8,12 +8,12 @@ var jquery = fs.readFileSync('node_modules/jquery/dist/jquery.js', 'utf-8');
 
 describe('tags', function() {
   describe('findRawTags()', function () {
-    it('should return null when no html tags', function (done) {
+    it('should return [] when no html tags', function (done) {
       jsdom.env('<html><head></head><body></body></html>', {
         src: [jquery],
         done: function (errors, window) {
           var tags = validate.findRawTags(window.$, ['<canvas>']);
-          expect(tags).to.be.not.ok;
+          expect(tags.length).to.be.not.ok;
           done();
         }
       });
@@ -29,12 +29,12 @@ describe('tags', function() {
       });
     });
   });
-  describe('findInTag()', function () {
+  describe('validate()', function () {
     it('should return null when no html tags', function (done) {
       jsdom.env('<html><head></head><body></body></html>', {
         src: [jquery],
         done: function (errors, window) {
-          var tags = validate.findInTag(window.$, ['<link> in <head>', '<div> in <p>']);
+          var tags = validate.validate(window, ['<link> in <head>', '<div> in <p>']);
           expect(tags).to.be.not.ok;
           done();
         }
@@ -45,7 +45,7 @@ describe('tags', function() {
         src: [jquery],
         done: function (errors, window) {
           var search = ['<canvas> in <body>', '<body> in <canvas>'];
-          var tags = validate.findInTag(window.$, search);
+          var tags = validate.validate(window, search);
           expect(tags).to.deep.equal(['<canvas> in <body>']);
           done();
         }

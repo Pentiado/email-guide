@@ -87,13 +87,13 @@ describe('styles', function() {
       });
     });
   });
-  describe('findStyles()', function () {
+  describe('validate()', function () {
     it('should return all styles found', function (done) {
       jsdom.env('<html><head><style>body { color: black; }</style></head><body><div style="background: red"></div><style>p { font-size: 12px; }</style></body></html>', {
         src: [jquery],
         done: function (errors, window) {
           var styles = ['color', 'background'];
-          var result = validate.findStyles(window, styles);
+          var result = validate.validate(window, styles);
           expect(result).to.deep.equal(['background', 'color']);
           done();
         }

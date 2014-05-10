@@ -19,8 +19,8 @@
     "url": "https://github.com/Pentiado/email-guide/issues"
   },
   "scripts": {
-    "test": "node_modules/.bin/mocha --recursive --reporter spec",
-    "coverage": "node_modules/.bin/mocha --recursive -r blanket -R html-cov > coverage.html"
+    "test": "node_modules/.bin/mocha --recursive --reporter spec --timeout 5000",
+    "coverage": "node_modules/.bin/mocha --recursive -r blanket -R html-cov > coverage.html --timeout 5000"
   },
   "config": {
     "blanket": {
