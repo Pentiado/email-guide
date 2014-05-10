@@ -26,7 +26,7 @@ describe('validate()', function () {
           'Text & Fonts': {
             'direction': [true, false]
           },
-          'Style element': {
+          'Style Element': {
             '<style> in <head>': [true, false],
             '<style> in <body>': [true, false]
           },
@@ -37,7 +37,7 @@ describe('validate()', function () {
         var validated = validate(window, tests);
         expect(validated).to.deep.equal({
           'selectors': ['E'],
-          'Style element': ['<style> in <body>', '<style> in <head>'],
+          'Style Element': ['<style> in <body>', '<style> in <head>'],
           'HTML 5': ['<canvas>']
         });
         done();

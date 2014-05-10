@@ -17,7 +17,7 @@ describe('Parser', function () {
       var arr = [
         ['Responsive', '', '', ''],
         ['@media', '', '', 'Yes', 'No'],
-        ['Style element', '', '', '', ''],
+        ['Style Element', '', '', '', ''],
         ['<style> in <body>', '', '', 'Yes', 'Yes'],
         ['<style> in <head>', '', '', 'Yes', 'No']
       ];
@@ -25,7 +25,7 @@ describe('Parser', function () {
         'Responsive': {
           '@media': ['Yes', 'No']
         },
-        'Style element': {
+        'Style Element': {
           '<style> in <body>': ['Yes', 'Yes'],
           '<style> in <head>': ['Yes', 'No']
         }
