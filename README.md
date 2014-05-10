@@ -1,6 +1,4 @@
-# EmailGuide [![Coverage Status](https://coveralls.io/repos/Pentiado/email-guide/badge.png?branch=master)](https://coveralls.io/r/Pentiado/email-guide?branch=master) [ ![Codeship Status for Pentiado/email-guide](https://www.codeship.io/projects/2a8b9360-ba90-0131-330f-0aa8124e7323/status?branch=master)](https://www.codeship.io/projects/20908)
-
-# AngularJS generator [![Build Status](https://secure.travis-ci.org/yeoman/generator-angular.svg?branch=master)](http://travis-ci.org/yeoman/generator-angular)
+# EmailGuide [ ![Codeship Status for Pentiado/email-guide](https://www.codeship.io/projects/2a8b9360-ba90-0131-330f-0aa8124e7323/status?branch=master)](https://www.codeship.io/projects/20908) [![Coverage Status](https://coveralls.io/repos/Pentiado/email-guide/badge.png?branch=master)](https://coveralls.io/r/Pentiado/email-guide?branch=master)
 
 > The Ultimate Guide for developing your emails. Pass your message to EmailGuide and it will parse it with Campaign Monitor's [Guide to CSS support in email](http://www.campaignmonitor.com/css/) and return similar table but in JSON. Do you want visual tool? Check out my [CatchMe](https://github.com/Pentiado/catch-me) app.
 
