@@ -2,7 +2,7 @@
 
 var jsdom = require('jsdom');
 var fs = require('fs');
-var jquery = fs.readFileSync('../node_modules/jquery/dist/jquery.js', 'utf-8');
+var jquery = fs.readFileSync(__dirname + '/../node_modules/jquery/dist/jquery.js', 'utf-8');
 var http = require('http');
 var unzip = require('unzip');
 var excel = require('excel');
