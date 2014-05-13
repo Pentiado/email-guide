@@ -26,3 +26,10 @@ Running `npm test` will run the unit tests with mocha.
 
 - LazyJS -> There is a lot of iterating over objects and arrays, lazy evaluation might bring great performance impact.
 - guide.xlsx -> Campaign monitor provide xlsx, extended version of guide. At the beginning of this project I was using but later I discovered some issues with parsing it, more email clients than are visible, not equal number of columns. Parsing by rows doesn't work. Right now there is just simple crawler that collects data from web page, but soon I will take different approach to getting info from xlsx.
+
+## Credits
+* [campaignmonitor](campaignmonitor.com) because they created awesome css guide to emails
+
+## Author
+
+Copyright 2014, Paweł Wszoła
